@@ -25,9 +25,13 @@
 			var s = now.getSeconds();
 			var m = now.getMinutes();
 			var h = now.getHours();
+			var year=now.getFullYear();
+			var month=now.getMonth()+1;
+			var dat=now.getDate()
 
 			ctx.translate(400, 400);
 			ctx.lineCap = "round";
+			
 
 			function drawClock() {
 				ctx.beginPath();
@@ -35,7 +39,12 @@
 				ctx.lineWidth = 20;
 				ctx.strokeStyle = "black";
 				ctx.stroke();
-				num=[1,2,3,4,5,6,7,8,9,10,11,12]
+				
+				ctx.font = "30px sans-serif"
+				ctx.textAlign = "center";
+				ctx.textBaseline = "middle";
+				ctx.fillText(year+'年'+month+'月'+dat+'日', 0, 100);
+				
 
 				for(var i = 0; i < 60; i++) {
 					ctx.beginPath();
@@ -45,6 +54,11 @@
 					ctx.arc(x, y, (i % 5 == 0 ? 6 : 3), 0, Math.PI * 2);
 					ctx.fill();
 				}
+				
+				
+				
+				
+				
 				var hour = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
 
 					  hour.forEach(
