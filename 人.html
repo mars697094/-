@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.man{
+				width: 500px;
+				height: 1000px;
+				margin: 20px auto;
+			}
+			.bd{
+				margin: 80px 100px 0;
+				/*-webkit-animation: bd 2s 0s linear infinite;*/
+			}
+			.lag{
+				position: relative;
+				top: -20px;
+				left: 110px;
+				z-index:-1;
+			}
+			@-webkit-keyframes bd{
+				from{
+					-webkit-transform:   rotate(5deg) translate( 5px,   0px);
+				}
+				25%{
+					-webkit-transform:  rotate(5deg) translate(-5px, -14px);
+				}
+				50%{
+					-webkit-transform:  rotate(5deg) translate( 5px,   0px);
+				}
+				75%{
+					-webkit-transform:  rotate(5deg) translate(-5px, -14px);
+				}
+				to{
+					-webkit-transform: rotate(5deg) translate( 5px,   0px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="man">
+			
+			<div class="bd"><img src="images/torso.png"/></div>
+			<div class="lag"><img src="images/left-thigh.png"/></div>
+			<div><img src="images/shin.png"/></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			
+			
+		</div>
+	</body>
+</html>
